@@ -18,7 +18,7 @@ Install Node.js and MySQL
 
 - Configure database properties in `config/database.js`
 
-js
+```js
 
 const mysql = require('mysql');
 
@@ -32,7 +32,7 @@ var pool      =    mysql.createPool({
 });
 
 module.exports = pool;
-
+```
 - Import the `config/personal_notes_database.sql` to databse.
 
     `mysql -u username -p personal_notes_database < config/personal_notes_database.sql`
