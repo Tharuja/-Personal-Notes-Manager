@@ -1,0 +1,377 @@
+{
+	"info": {
+		"_postman_id": "2f87c810-3c7a-4e56-81cd-00a67f326c6c",
+		"name": "Test API calls",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creat new note - first user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is a sample note-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/new/100",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"new",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new note - second user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is a sample note-for second user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/new/101",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"new",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new note - third user",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is a sample note-for third user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/new/102",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"new",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View (unarchived) notes of the first user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/view/100",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"view",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View (unarchived) notes of the second user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/view/101",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"view",
+						"101"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View (unarchived) notes of the third user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/view/102",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"view",
+						"102"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a saved note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is a sample note-for first user\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/update/9",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update a  note (not previously created)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"desc\": \"This is a Todo list\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:5000/update/11",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"update",
+						"11"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a saved note",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/delete/10",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a note (not previously created)",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/delete/12",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"delete",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Archive a saved note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/archive/9",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"archive",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Archive a saved note -",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/archive/8",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"archive",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Archive a note (not previously created)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/archive/12",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"archive",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unarchive a saved note",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/unarchive/9",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"unarchive",
+						"9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Unarchive a note (not previously created)",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/unarchive/12",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"unarchive",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View archived notes of the first user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/viewarchived/100",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"viewarchived",
+						"100"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "View archived notes of the second user",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:5000/viewarchived/101",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"viewarchived",
+						"101"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
